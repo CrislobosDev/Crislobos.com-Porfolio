@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Inicio from "../components/Inicio.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Sobremi from "../components/Sobremi.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Bienvenido a mi web">
+  <Header />
+
+  <section id="inicio">
+    <Inicio />
+  </section>
+
+  <section id="Proyectos">
+    <Proyectos />
+  </section>
+
+  <section id="Sobremi">
+    <Sobremi />
+  </section>
+
+  <section>
+    <Footer />
+  </section>
+</Layout>

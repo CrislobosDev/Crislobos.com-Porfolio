@@ -1,0 +1,76 @@
+<h1>Proyectos Web</h1>
+<h4>Explora mis proyectos y observa la calidad y creatividad en cada uno.</h4>
+
+<div class="contenedorTarjetas">
+  <a
+    class="tarjeta"
+    href="https://musicfestivalpage.netlify.app/"
+    target="_blank"
+  >
+    <img src="public/Fest.png" alt="" />
+    <h2>Festival de Musica</h2>
+    <p>
+      Página web para promocionar un festival de música, con información sobre
+      artistas, horarios y compra de entradas en línea.
+    </p>
+  </a>
+  <a class="tarjeta" href="https://coffeblogpage.netlify.app/" target="_blank">
+    <img src="public/Cafe.png" alt="" />
+    <h2>Blog Cafeteria</h2>
+    <p>
+      Blog sobre cafeterías, con reseñas, recetas de café, consejos para
+      baristas y noticias del mundo del café.
+    </p>
+  </a>
+  <a
+    class="tarjeta"
+    href="https://crislobosfreelancer.netlify.app/"
+    target="_blank"
+  >
+    <img src="public/Freelancer.png" alt="" />
+    <h2>Freelancer</h2>
+    <p>
+      Portafolio de un freelancer con servicios ofrecidos, proyectos anteriores,
+      testimonios de clientes y formulario de contacto.
+    </p>
+  </a>
+</div>
+
+<style>
+  h1 {
+    margin: 0 0 3rem 0;
+  }
+
+  p {
+    color: aliceblue;
+    text-decoration: none;
+  }
+  .contenedorTarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin: 6rem;
+  }
+  .tarjeta {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 1rem;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 20rem;
+    transition: ease 0.1s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: ease 0.1s;
+    }
+  }
+
+  img {
+    width: 20rem;
+    height: 10rem;
+  }
+</style>
