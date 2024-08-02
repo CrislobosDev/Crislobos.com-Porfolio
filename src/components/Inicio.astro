@@ -16,7 +16,7 @@
     <p>Contactame!</p>
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-arrow-narrow-down"
+      class="icon-tabler-arrow-narrow-down"
       width="44"
       height="44"
       viewBox="0 0 24 24"
@@ -120,27 +120,6 @@
       ></path>
     </svg>
   </a>
-  <a href="#" target="_blank">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-brand-instagram"
-      width="44"
-      height="44"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="#833AB4"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-      ></path>
-      <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-      <path d="M16.5 7.5l0 .01"></path>
-    </svg>
-  </a>
 </div>
 
 <style>
@@ -176,5 +155,35 @@
   a {
     color: transparent;
     margin: 1rem;
+  }
+
+  .icon {
+    transition: ease 0.2s;
+  }
+
+  .icon:hover {
+    transition: ease 0.2s;
+    transform: scale3d(1.5, 1.5, 0.3);
+    -webkit-transform: scale3d(1.5, 1.5, 0.3);
+    -moz-transform: scale3d(1.5, 1.5, 0.3);
+  }
+
+  .icon-tabler-arrow-narrow-down {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    margin-top: 2rem;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 </style>
