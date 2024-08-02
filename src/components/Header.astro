@@ -1,14 +1,13 @@
 <header>
   <h1>Cris Dev<span>/</span></h1>
-  
 
   <div class="enlaces">
     <a href="#Inicio">Inicio</a>
     <a href="#Proyectos">Proyectos</a>
-    <a href="#Sobremi">Sobre mi</a>
+    <a href="#Sobremi">Sobre mí</a>
   </div>
 
-  <button class="hamburguesa">
+  <button class="hamburguesa" id="menu">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -23,8 +22,10 @@
         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
     </svg>
   </button>
+</header>
 
-  <button class="nightMode">
+<div class="menuopen hidden" id="menu-open">
+  <button class="salirMenu" id="botonSalir">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -36,11 +37,13 @@
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-      ></path>
+        d="M6 18 18 6M6 6l12 12"></path>
     </svg>
   </button>
-</header>
+  <a href="#Inicio">Inicio</a>
+  <a href="#Proyectos">Proyectos</a>
+  <a href="#Sobremi">Sobre mí</a>
+</div>
 
 <style>
   header {
@@ -51,15 +54,40 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-    padding: 0 2rem;
+    padding: 0 1rem;
     max-width: 1200px;
     margin: 0 auto;
     height: 3.3rem;
   }
 
+  .menuopen {
+    text-align: center;
+    width: 25rem;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .salirMenu {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px ;
+    margin-bottom: 4rem;
+  }
+
   h1 {
     font-size: large;
-    
+    width: 20rem;
   }
   span {
     color: blue;
@@ -72,6 +100,7 @@
     font-size: large;
     margin: 0 1rem;
     transition: ease 0.2s;
+    margin: 2rem 1rem;
 
     &:hover {
       color: blue;
@@ -84,21 +113,6 @@
     height: 24px;
   }
 
-  .nightMode {
-    background-color: transparent;
-    color: aliceblue;
-    border: none;
-    width: 2.2rem;
-    height: 2.2rem;
-    cursor: pointer;
-    transition: ease 0.2s;
-
-    &:hover {
-      color: blue;
-      transition: ease 0.2s;
-    }
-  }
-
   .hamburguesa {
     background-color: transparent;
     color: aliceblue;
@@ -107,22 +121,32 @@
     cursor: pointer;
     margin-right: 1rem;
     transition: ease 0.2s;
+  }
 
-    &:hover {
-      color: blue;
-      transition: ease 0.2s;
-    }
+  .hamburguesa:hover {
+    color: blue;
+    transition: ease 0.2s;
   }
 
   @media only screen and (max-width: 930px) {
     .enlaces {
-      visibility: hidden;
+      display: none;
     }
   }
 
   @media only screen and (min-width: 930px) {
     .hamburguesa {
-      visibility: hidden;
+      display: none;
     }
   }
 </style>
+
+<script>
+  document.getElementById("menu").addEventListener("click", function () {
+    document.getElementById("menu-open").classList.toggle("hidden");
+  });
+
+  document.getElementById("botonSalir").addEventListener("click", function () {
+    document.getElementById("menu-open").classList.toggle("hidden");
+  });
+</script>
